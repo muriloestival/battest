@@ -1,18 +1,59 @@
 @echo off
-set color=60 
+set color=73
 set ultimaversao=a00201b
 color %color%
 set title=Maquina central
 title %title%
-set versao=a00211b
+set versao=a00215b
 set local=Desculpe, nao consegui permisao para localizacao!
 
+goto abertura
+
+cls
+
+:abertura
+cls
+
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo.
+echo.
+echo.
+echo ========================================================================================================================
+echo Loading... loading... Loading... Loading... Loading ... Loading... Loading... Loading... Loading... Loading... Loading..
+echo ========================================================================================================================
+echo.
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo                            O     O    O O O O   O         O          O O O           O
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo                            O     O    O         O         O        O       O         O
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo                            O O O O    O O O O   O         O        O       O         O
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo                            O     O    O         O         O        O       O         O
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo                            O     O    o O O O   O O O O   O O O O    O O O           O
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo.                                                                                      
+echo                                                                                      O
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo                                                                                     OOO
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo                                                                                      O
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo.
+echo.
+ping -n 3 -w 1000 0.0.0.1 > nul
 
 
 goto menu
 
 
-cls
+
+
+
+
+
+
 
 :menu
 
@@ -448,15 +489,15 @@ ping -n 2 -w 1000 0.0.0.1 > nul
 echo.
 echo Oque mudou?
 echo ============================================================
-echo Correcao do bug onde o local da pasta aparecia erroniamente *
+echo Mudanca na cor de fundo                                     *
 ping -n 2 -w 1000 0.0.0.1 > nul
-echo Atualizacoes basicas no sistema                             *
+echo Atualizacoes sistematicas!                                  *
 ping -n 2 -w 1000 0.0.0.1 > nul
-echo Compatibilidade melhor com GitHub                           *
+echo Nova introducao (HELLO!)                                    *
 ping -n 2 -w 1000 0.0.0.1 > nul
-echo Pequenas acoes graficas no menu                             *
+echo Atualizacao no log de versao                                *
 ping -n 2 -w 1000 0.0.0.1 > nul   
-echo Log de versoes e tutorial para atualizar versoes adicionados*                          
+echo Mudanca na cor dos escritos                                 *                          
 echo ============================================================
 ping -n 2 -w 1000 0.0.0.1 > nul
 echo  Aperte qualquer tecla para voltar...
@@ -471,9 +512,9 @@ echo Para atualizar va ate o GitHub e verifique a versao disponivel nas primeira
 echo ==================================================================================================================
 echo.
 ping -n 2 -w 1000 0.0.0.1 > nul
-echo ========================================================================
-echo Se voce tem a versao %ultimaversao% ja existe uma versao nova para voce!
-echo ========================================================================
+echo ============================================================================
+echo Se voce tem a versao a00201b ou a00211b ja existe uma versao nova para voce!
+echo ============================================================================
 ping -n 2 -w 1000 0.0.0.1 > nul
 echo                   *Voce esta usando a versao: %versao%*
 ping -n 2 -w 1000 0.0.0.1 > nul
