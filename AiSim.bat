@@ -3,7 +3,7 @@ set color=60
 color %color%
 set title=Maquina central
 title %title%
-set versao=a00201b
+set versao=a00208b
 set local=C:\Users\Murilo\aisim
 
 
@@ -27,14 +27,15 @@ echo                                  *3. Quem me criou?                        
 echo                                  *4. Onde estou?                              *
 echo                                  *5. Tenho emocoes?                           *
 echo                                  *6. Porque nao posso usar acento?            *
-echo                                             -  Deu de perguntas! -
+echo                                  *           -  Deu de perguntas! -           *
 echo                                  *7. Abrir ponte para o mundo dos comandos!   *
 echo                                  *8. Abrir imagems do meu sistema!            *
 echo                                  *9. Quer mudar de cor?                       *
 echo                                  *10. Quer mudar meu titulo?                  *
 echo                                  *11. Vamos a internet!                       *
 echo                                  *12. Minha versao!                           *
-echo                                  * Mais funcionalidades em breve!             *
+echo                                  *13. Minhas configuracoes de IP!             *
+echo                                  *     - Mais funcionalidades em breve! -     *      
 echo                                   ============================================
 
 set /p opcao= Escolha uma opcao: 
@@ -51,7 +52,8 @@ if %opcao% equ 9 goto opcao9
 if %opcao% equ 10 goto opcao10
 if %opcao% equ 11 goto opcao11
 if %opcao% equ 12 goto opcao12
-if %opcao% GEQ 13 goto opcaoinvalida
+if %opcao% equ 13 goto opcao13
+if %opcao% GEQ 14 goto opcaoinvalida
 if %opcao% < 1 goto opcaoinvalida
 
 
@@ -395,7 +397,7 @@ goto menu
  echo [SystemAI]Em suas ordems!
  echo =========================
   ping -n 2 -w 1000 0.0.0.1 > nul
-   start chrome.exe
+   start https://www.google.com.br
   ping -n 2 -w 1000 0.0.0.1 > nul
    echo  Aperte qualquer tecla para voltar...
     pause >nul 
@@ -415,6 +417,20 @@ echo ======================================================
 echo  Aperte qualquer tecla para voltar...
 pause >nul 
 goto menu
+
+:opcao13
+
+echo ====================================
+echo [SystemAI]Voce que manda! Aqui esta.
+echo ====================================
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo.
+ipconfig
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo  Aperte qualquer tecla para voltar...
+pause >nul 
+goto menu
+
 
 
 
