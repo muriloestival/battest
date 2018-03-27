@@ -1,10 +1,11 @@
 @echo off
 set color=60 
+set ultimaversao=a00201b
 color %color%
 set title=Maquina central
 title %title%
-set versao=a00208b
-set local=C:\Users\Murilo\aisim
+set versao=a00211b
+set local=Desculpe, nao consegui permisao para localizacao!
 
 
 
@@ -35,6 +36,8 @@ echo                                  *10. Quer mudar meu titulo?               
 echo                                  *11. Vamos a internet!                       *
 echo                                  *12. Minha versao!                           *
 echo                                  *13. Minhas configuracoes de IP!             *
+echo                                  *14. Oque mudou na versao %versao% ?         *
+echo                                  *15. Atualizar minha versao!                 *
 echo                                  *     - Mais funcionalidades em breve! -     *      
 echo                                   ============================================
 
@@ -53,7 +56,9 @@ if %opcao% equ 10 goto opcao10
 if %opcao% equ 11 goto opcao11
 if %opcao% equ 12 goto opcao12
 if %opcao% equ 13 goto opcao13
-if %opcao% GEQ 14 goto opcaoinvalida
+if %opcao% equ 14 goto logdeversao
+if %opcao% equ 15 goto atualizarversao
+if %opcao% GEQ 16 goto opcaoinvalida
 if %opcao% < 1 goto opcaoinvalida
 
 
@@ -132,6 +137,11 @@ echo ===================================================
 echo [SystemAI]Impossivel Abrir imagems um ERRO ocorreu!
 echo ===================================================
 start msgerrofoto.vbs
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo =========================================================
+echo [SystemAI]Mas voce pode ver a linha de codigo pelo GitHub
+echo =========================================================
+ping -n 2 -w 1000 0.0.0.1 > nul
 echo  Aperte qualquer tecla para voltar...
 pause >nul 
 goto menu
@@ -431,7 +441,46 @@ echo  Aperte qualquer tecla para voltar...
 pause >nul 
 goto menu
 
+:logdeversao
 
+echo Voce esta na versao %versao%
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo.
+echo Oque mudou?
+echo ============================================================
+echo Correcao do bug onde o local da pasta aparecia erroniamente *
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo Atualizacoes basicas no sistema                             *
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo Compatibilidade melhor com GitHub                           *
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo Pequenas acoes graficas no menu                             *
+ping -n 2 -w 1000 0.0.0.1 > nul   
+echo Log de versoes e tutorial para atualizar versoes adicionados*                          
+echo ============================================================
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo  Aperte qualquer tecla para voltar...
+pause >nul 
+goto menu
+
+:atualizarversao
+
+ping -n 2 -w 1000 0.0.0.1 > nul                                                                                              
+echo ==========================================================================================================******==
+echo Para atualizar va ate o GitHub e verifique a versao disponivel nas primeiras linhas de codigo (set versao=a00211b)
+echo ==================================================================================================================
+echo.
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo ========================================================================
+echo Se voce tem a versao %ultimaversao% ja existe uma versao nova para voce!
+echo ========================================================================
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo                   *Voce esta usando a versao: %versao%*
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo.
+echo  Aperte qualquer tecla para voltar...
+pause >nul 
+goto menu
 
 
 
