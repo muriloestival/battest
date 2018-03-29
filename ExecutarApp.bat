@@ -4,7 +4,7 @@ set ultimaversao=a00201b
 color %color%
 set title=Maquina central
 title %title%
-set versao=a00215b
+set versao=a00218b
 set local=Desculpe, nao consegui permisao para localizacao!
 
 goto abertura
@@ -15,34 +15,122 @@ cls
 cls
 
 ping -n 2 -w 1000 0.0.0.1 > nul
-echo.
-echo.
-echo.
 echo ========================================================================================================================
 echo Loading... loading... Loading... Loading... Loading ... Loading... Loading... Loading... Loading... Loading... Loading..
 echo ========================================================================================================================
+ping -n 2 -w 1000 0.0.0.1 > nul
 echo.
-ping -n 2 -w 1000 0.0.0.1 > nul
-echo                            O     O    O O O O   O         O          O O O           O
-ping -n 2 -w 1000 0.0.0.1 > nul
-echo                            O     O    O         O         O        O       O         O
-ping -n 2 -w 1000 0.0.0.1 > nul
-echo                            O O O O    O O O O   O         O        O       O         O
-ping -n 2 -w 1000 0.0.0.1 > nul
-echo                            O     O    O         O         O        O       O         O
-ping -n 2 -w 1000 0.0.0.1 > nul
-echo                            O     O    o O O O   O O O O   O O O O    O O O           O
-ping -n 2 -w 1000 0.0.0.1 > nul
+echo                  O     O    O O O O   O         O          O O O           O
+echo                  O     O    O         O         O        O       O         O
+echo                  O O O O    O O O O   O         O        O       O         O
+echo                  O     O    O         O         O        O       O         O
+echo                  O     O    o O O O   O O O O   O O O O    O O O           O
 echo.                                                                                      
-echo                                                                                      O
-ping -n 2 -w 1000 0.0.0.1 > nul
-echo                                                                                     OOO
-ping -n 2 -w 1000 0.0.0.1 > nul
-echo                                                                                      O
-ping -n 2 -w 1000 0.0.0.1 > nul
-echo.
+echo                                                                            O
+echo                                                                           OOO
+echo                                                                            O
 echo.
 ping -n 3 -w 1000 0.0.0.1 > nul
+cls
+goto carregando
+
+:carregando
+
+echo.
+echo.
+echo.
+echo.
+ping -n 1 -w 1000 0.0.0.1 > nul
+echo                                                   O O O
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo                                                 O       O
+ping -n 2 -w 1000 0.0.0.1 > nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                O         O
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo                                                 O       O
+ping -n 2 -w 1000 0.0.0.1 > nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                   O O O
+ping -n 2 -w 1000 0.0.0.1 > nul
+cls
+
+
+echo.
+echo.
+echo.
+echo.
+ping -n 1 -w 1000 0.0.0.1 > nul
+echo                                                   O O O
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo                                                 O       O
+ping -n 2 -w 1000 0.0.0.1 > nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                O         O
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo                                                 O       O
+ping -n 2 -w 1000 0.0.0.1 > nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                   O O O
+ping -n 2 -w 1000 0.0.0.1 > nul
+cls
+ping -n 2 -w 1000 0.0.0.1 > nul
+
+
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                   O O O
+echo                                                 O       O
+echo                                                O         O
+echo                                                 O       O
+echo                                                   O O O
+ping -n 2 -w 1000 0.0.0.1 > nul
+cls
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                   O O O
+echo                                                 O       O
+echo                                                O         O
+echo                                                 O       O
+echo                                                   O O O
+ping -n 2 -w 1000 0.0.0.1 > nul
+cls
+ping -n 1 -w 1000 0.0.0.1 > nul
+
+
+
 
 
 goto menu
@@ -79,6 +167,7 @@ echo                                  *12. Minha versao!                        
 echo                                  *13. Minhas configuracoes de IP!             *
 echo                                  *14. Oque mudou na versao %versao% ?         *
 echo                                  *15. Atualizar minha versao!                 *
+echo.                                 *16. Desligar maquina!                       *
 echo                                  *     - Mais funcionalidades em breve! -     *      
 echo                                   ============================================
 
@@ -99,7 +188,12 @@ if %opcao% equ 12 goto opcao12
 if %opcao% equ 13 goto opcao13
 if %opcao% equ 14 goto logdeversao
 if %opcao% equ 15 goto atualizarversao
-if %opcao% GEQ 16 goto opcaoinvalida
+if %opcao% equ Deu de perguntas! goto deuporhoje
+if %opcao% equ deu de perguntas goto deuporhoje
+if %opcao% equ Deu de perguntas goto deuporhoje
+if %opcao% equ - Deu de perguntas! - goto deuporhoje
+if %opcao% equ 16 goto turnoff
+if %opcao% GEQ 17 goto opcaoinvalida
 if %opcao% < 1 goto opcaoinvalida
 
 
@@ -489,15 +583,15 @@ ping -n 2 -w 1000 0.0.0.1 > nul
 echo.
 echo Oque mudou?
 echo ============================================================
-echo Mudanca na cor de fundo                                     *
+echo Nova abertura e desligamento                                *
 ping -n 2 -w 1000 0.0.0.1 > nul
 echo Atualizacoes sistematicas!                                  *
 ping -n 2 -w 1000 0.0.0.1 > nul
-echo Nova introducao (HELLO!)                                    *
+echo Opcao desligar adicionada                                   *
 ping -n 2 -w 1000 0.0.0.1 > nul
 echo Atualizacao no log de versao                                *
 ping -n 2 -w 1000 0.0.0.1 > nul   
-echo Mudanca na cor dos escritos                                 *                          
+echo NONE                                                        *                          
 echo ============================================================
 ping -n 2 -w 1000 0.0.0.1 > nul
 echo  Aperte qualquer tecla para voltar...
@@ -512,9 +606,9 @@ echo Para atualizar va ate o GitHub e verifique a versao disponivel nas primeira
 echo ==================================================================================================================
 echo.
 ping -n 2 -w 1000 0.0.0.1 > nul
-echo ============================================================================
-echo Se voce tem a versao a00201b ou a00211b ja existe uma versao nova para voce!
-echo ============================================================================
+echo ==========================================================================================
+echo Se voce tem a versao entre a versao a00201b a a00215b ja existe uma versao nova para voce!
+echo ==========================================================================================
 ping -n 2 -w 1000 0.0.0.1 > nul
 echo                   *Voce esta usando a versao: %versao%*
 ping -n 2 -w 1000 0.0.0.1 > nul
@@ -522,6 +616,63 @@ echo.
 echo  Aperte qualquer tecla para voltar...
 pause >nul 
 goto menu
+
+
+:deuporhoje
+
+echo Haha parabems
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo  Aperte qualquer tecla para voltar...
+pause >nul 
+goto menu
+
+
+:turnoff
+
+echo.
+ping -n 1 -w 1000 0.0.0.1 > nul
+echo ============================
+echo A suas ordems! Desligando...
+echo ============================
+ping -n 2 -w 1000 0.0.0.1 > nul
+
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                   O O O
+echo                                                 O       O
+echo                                                O         O
+echo                                                 O       O
+echo                                                   O O O
+ping -n 2 -w 1000 0.0.0.1 > nul
+cls
+ping -n 2 -w 1000 0.0.0.1 > nul
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                   O O O
+echo                                                 O       O
+echo                                                O         O
+echo                                                 O       O
+echo                                                   O O O
+ping -n 2 -w 1000 0.0.0.1 > nul
+cls
+ping -n 1 -w 1000 0.0.0.1 > nul
+echo Shutting down...
+ping -n 2 -w 1000 0.0.0.1 > nul
+exit
+
+
+
+
+
+
+
 
 
 
